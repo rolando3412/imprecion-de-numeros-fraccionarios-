@@ -1,4 +1,4 @@
-# imprecion-de-numeros-fraccionarios-
+# imprecion-de-numeros-fraccionarios en cpp-
 
 #include <iostream>
 #include <cmath>
