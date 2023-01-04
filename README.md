@@ -1,7 +1,7 @@
 # imprecion-de-numeros-fraccionarios en cpp-
 
-#include <iostream>
-#include <cmath>
+#include<iostream>
+#include<cmath>
 #include<cstdlib>
 /**
 # 26 ejercicio
@@ -13,39 +13,29 @@
 
 using namespace std;
 
-    int imprimir(int numerador , int denominador); // declaracion de la funcion
-
 // variables globales
-int n = 0;
+int n = 0 ;
 int numerador = 0;
 int denominador = 0;
-int z = 0;
 int main()
 {
-
     std::cout << "ingrese un numero entero: ";
     cin >> n;
 
-    // llamado de funcion
-    cout<<"la lista es" << imprimir( numerador ,  denominador)<< endl ;
+    std::cout << "los primeros " << n << " elementos de la lista son: " << std::endl;
+   for (int i = 1; i <= n; i++)
+    {
+        numerador = i;
+        denominador = 1;
+        std::cout << numerador << "/" << denominador << ", ";
+        for (int j = 1; j < i; j++)
+        {
+            denominador++;
 
+            std::cout << numerador << "/" << denominador << ", ";
+        }
+    }
 
     return 0;
 }
-// definicion de resultados
-    int imprimir(int numerador , int denominador)
-    {
-
-        // proceso para hacer la operacion  la varible n,
-for (int   i = 1; i <= n; i++)
-     for (int  j = 1; j <= 10; j++)
-     {
-         /* imprimiendo los resultados como faccion
-             de los parametros dados */
-         numerador = i;
-         denominador = j;
-         std::cout << numerador << "/" << denominador << std::endl;
-     }
-      return z  ;
-    }
 
